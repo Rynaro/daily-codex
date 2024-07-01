@@ -6,7 +6,7 @@ NODE_LTS=v20.15
 safe_source "utilities.sh"
 
 # Function to install the latest Node.js version
-install_latest_node() {
+install_package() {
   if command_exists node; then
     echo "Node already installed!"
   else
@@ -18,7 +18,7 @@ install_latest_node() {
 configure_package() {
   if command_exists yarn; then
     echo "Yarn already installed!"
-  elif
+  else
     npm install -g yarn
   fi
 }

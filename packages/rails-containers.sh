@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Source utilities script
 safe_source "utilities.sh"
 
@@ -7,18 +9,15 @@ PERSONAL_WORKSPACE_FOLDER=~/workspace/personal
 install_package() {
   if command_exists docker; then
     echo "Installing Personal Rails Based Containers"
-    cd $PERSONAL_WORKSPACE_FOLDER
-    git clone git@github.com:Rynaro/drun.git .
+    git clone git@github.com:Rynaro/drun.git $PERSONAL_WORKSPACE_FOLDER/drun
   else
     echo "git and docker are required for it."
   fi
 }
 
-configure_package {
+configure_package() {
   echo "Building drun containers!"
-  cd drun
-  dc build . # dc aliases is set in potions main repo
-  cd ~
+  docker build $PERSONAL_WORKSPACE_FOLDER/drun
 }
 
 install_package

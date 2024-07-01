@@ -5,10 +5,9 @@ NVM_VERSION=0.39.7
 # Source utilities script
 safe_source "utilities.sh"
 
-
 # Function to install NVM
 install_package() {
-  if command_exists nvm; then
+  if [ -d "$NVM_DIR" ] && [ -s "$NVM_DIR/nvm.sh" ]; then
     echo "NVM is already installed."
   else
     echo "Installing NVM..."
@@ -17,7 +16,6 @@ install_package() {
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
   fi
 }
-
 
 install_package
 
