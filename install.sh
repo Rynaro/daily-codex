@@ -2,7 +2,10 @@
 
 PLUGIN_NAME="daily-codex"
 PLUGIN_VERSION="0.0.1"
-PLUGIN_RELATIVE_FOLDER="./daily-codex"
+PLUGIN_RELATIVE_FOLDER="$(dirname "$0")/$1"
+
+# Source utilities script
+source "$PLUGIN_RELATIVE_FOLDER/utilities.sh"
 
 # Function to prepare to install packages
 prepare() {
