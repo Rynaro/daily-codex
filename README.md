@@ -1,4 +1,4 @@
-<img src="https://github.com/Rynaro/daily-codex/assets/5271543/adc73115-9fad-48b1-ab56-07b63aa1dd81" height="80" />
+<p align="center"><img src="https://github.com/user-attachments/assets/129953d9-391a-41ab-ac33-768f9a482952" height="200px" /></p>
 
 # Daily Codex
 
