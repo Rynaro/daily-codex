@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LOCKED_BUNDLER_VERSION=2.5
-MY_RUBY_VERSION=3.3.0
+MY_RUBY_VERSION=3.3.5
 
 # Source utilities script
 safe_source "utilities.sh"
@@ -16,11 +16,11 @@ prepare_package() {
 # Function to install rbenv
 install_package() {
   if command_exists rbenv; then
-    echo "Installing Ruby $latest_ruby_version..."
+    log "Installing Ruby $latest_ruby_version..."
     rbenv install $MY_RUBY_VERSION
     rbenv global $MY_RUBY_VERSION
   else
-    echo "rbenv is required for ruby installation."
+    log "rbenv is required for ruby installation."
   fi
 }
 

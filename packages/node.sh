@@ -8,16 +8,16 @@ safe_source "utilities.sh"
 # Function to install the latest Node.js version
 install_package() {
   if command_exists node; then
-    echo "Node already installed!"
+    log "Node already installed!"
   else
-    echo "Installing the latest Node.js version..."
+    log "Installing the latest Node.js version..."
     nvm install $NODE_LTS
   fi
 }
 
 configure_package() {
   if command_exists yarn; then
-    echo "Yarn already installed!"
+    log "Yarn already installed!"
   else
     npm install -g yarn
   fi
